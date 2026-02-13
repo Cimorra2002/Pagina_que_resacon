@@ -1,0 +1,212 @@
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 70px;
+}
+
+/* LOGO */
+/*
+nav h1 {
+    color: white;
+    font-size: 24px;
+    letter-spacing: 2px;
+}*/
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LISTA MENU */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* LINKS */
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* EFECTO LINEA HOVER */
+
+nav .menu-animation::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #00e1ff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #00e1ff;
+}
+
+/* BOTON HAMBURGUESA */
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    position: relative;
+}
+
+.menu-toggle span {
+    background: white;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    transition: 0.4s;
+    border-radius: 5px;
+}
+
+/* LINEAS */
+
+.menu-toggle span:nth-child(1) {
+    top: 0;
+}
+
+.menu-toggle span:nth-child(2) {
+    top: 10px;
+}
+
+.menu-toggle span:nth-child(3) {
+    top: 20px;
+}
+
+/* ANIMACION A X */
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/* MENU NORMAL */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    transition: 0.4s;
+}
+
+.brand img {
+    height: 45px;
+    width: auto;
+}
+
+.brand h1 {
+    color: white;
+    font-size: 26px;
+    margin: 0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 58px;
+        left: 0;
+        padding: 0;
+        gap: 0;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+
+    /* MENU ABIERTO */
+
+    nav ul.active {
+        max-height: 300px;
+    }
+
+    nav ul li a:hover {
+        background: #646464;
+        color: none;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        border: white 1px solid;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+    }
+
+    nav a::after {
+        background: none;
+    }
+
+    /* LOGO */
+
+    .brand img {
+        height: 35px;
+    }
+
+    .brand h1 {
+        font-size: 22px;
+    }
+}

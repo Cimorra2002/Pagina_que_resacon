@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Que Resacón</title>
+  <link rel="stylesheet" href="css/nav_styles.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="brand">
+        <a href="#inicio">
+          <img src="images/logo.png" alt="Logo">
+        </a>
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul id="menu">
+        <li><a class="menu-animation" href="#inicio">Inicio</a></li>
+        <li><a class="menu-animation" href="#eventos">Eventos</a></li>
+        <li><a class="menu-animation" href="#galeria">Galería</a></li>
+        <li><a class="menu-animation" href="#contacto">Contacto</a></li>
+      </ul>
+
+      <div class="user-area" id="userArea">
+        <a class="menu-animation" href="#" onclick="mostrarLogin()">Iniciar sesión</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="menu-animation" href="#" onclick="mostrarRegistro()">Registrarse</a>
+      </div>
+    </nav>
+  </header>
+  <script src="js/script.js"></script>
+</body>
+</html>
