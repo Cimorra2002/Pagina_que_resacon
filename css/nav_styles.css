@@ -176,24 +176,24 @@ nav a:hover {
         display: block;
     }
 
-   nav ul {
-    position: absolute;
-    top: 58px;
-    left: 0;
-    width: 100%;
-    background: black;
-    flex-direction: column;
-    align-items: center;
-    max-height: 0;
-    overflow-y: hidden;
-    transition: max-height 0.5s ease;
-    padding-bottom: 10px;
-}
+    nav ul {
+        position: absolute;
+        top: 58px;
+        left: 0;
+        width: 100%;
+        background: black;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow-y: hidden;
+        transition: max-height 0.5s ease;
+        box-sizing: border-box;
+    }
 
-nav ul.active {
-    max-height: calc(100vh - 58px);
-    overflow-y: auto;
-}
+    nav ul.active {
+        max-height: calc(100vh - 58px);
+        overflow-y: auto;
+    }
 
     nav ul li a:hover {
         background: #646464;
@@ -220,16 +220,11 @@ nav ul.active {
         height: 35px;
     }
 
+    /* ICONO DENTRO DEL MENÚ */
     .user-panel {
-        margin-left: 0;
+        width: 100%;
         justify-content: center;
-        width: 100%;
-        padding: 7px 0;
-    }
-
-    #menu-img {
-        width: 100%;
-        padding: 0;
+        padding: 10px 0;
         margin: 0;
     }
 
