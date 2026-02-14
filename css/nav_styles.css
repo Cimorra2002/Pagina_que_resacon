@@ -193,8 +193,9 @@ nav a:hover {
 
     /* MENU ABIERTO */
     nav ul.active {
-        max-height: 100vh;
-
+        max-height: calc(100vh - 58px);
+        /* altura pantalla menos header */
+        overflow-y: auto;
     }
 
     nav ul li a:hover {
