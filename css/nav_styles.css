@@ -209,6 +209,11 @@ nav a:hover {
     nav ul li a {
         display: block;
         padding: 15px 20px;
+        width: 100%;
+    }
+
+    #menu-img{
+        padding: 0;
     }
 
     nav a::after {
