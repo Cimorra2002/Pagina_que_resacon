@@ -183,8 +183,8 @@ nav a:hover {
     }
 
     nav ul.active {
-        max-height: calc(100vh - 65px);
-        padding-bottom: 20px;
+        max-height: 85vh;
+        padding-bottom: 80px;
     }
 
     nav ul li {
