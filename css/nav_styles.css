@@ -26,55 +26,29 @@ nav {
     padding: 15px 50px;
 }
 
-/* PANEL USUARIO DERECHA */
-.user-panel {
+nav ul {
     display: flex;
-    gap: 15px;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right {
+    display: flex;
     align-items: center;
-    margin-left: auto;
+    gap: 15px;
 }
 
 .user-panel img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    cursor: pointer;
     transition: 0.3s;
 }
 
 .user-panel img:hover {
     transform: scale(1.15);
-}
-
-/* LOGO */
-/*
-nav h1 {
-    color: white;
-    font-size: 24px;
-    letter-spacing: 2px;
-}*/
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* LISTA MENU */
-nav ul {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    list-style: none;
-}
-
-.menu-center {
-    display: flex;
-    gap: 30px;
-    text-align: center;
-    align-items: center;
-    margin: 0 auto;
 }
 
 /* LINKS */
@@ -160,7 +134,7 @@ nav a:hover {
 
 @media (min-width: 768px) and (max-width: 868px) {
 
-    .menu-center {
+    #menu {
         display: flex;
         gap: 20px;
         text-align: center;
@@ -170,72 +144,62 @@ nav a:hover {
 }
 
 /* RESPONSIVE */
-@media(max-width:768px) {
+@media(max-width: 768px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    /* Cambio el orden en móvil */
+    .nav-right {
+        display: flex;
+        flex-direction: row; /* Icono y Hamburguesa en fila */
+    }
+
+    .user-panel {
+        order: 1; /* El icono de usuario aparece primero */
+    }
 
     .menu-toggle {
         display: block;
+        order: 2; /* La hamburguesa aparece después */
+        margin-left: 15px;
     }
 
+    /* Menú desplegable */
     nav ul {
         position: absolute;
-        top: 58px;
+        top: 65px; /* Ajustar según altura de tu header */
         left: 0;
         width: 100%;
-        background: black;
+        background: rgba(0, 0, 0, 0.95);
         flex-direction: column;
-        align-items: center;
+        gap: 0;
         max-height: 0;
-        overflow-y: hidden;
-        transition: max-height 0.5s ease;
-        box-sizing: border-box;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
     }
 
     nav ul.active {
-        max-height: calc(100vh - 58px);
-        overflow-y: auto;
-    }
-
-    nav ul li a:hover {
-        background: #646464;
-        color: none;
+        max-height: 500px;
     }
 
     nav ul li {
         width: 100%;
         text-align: center;
-        border: white 1px solid;
+        border-bottom: 1px solid #333;
     }
 
     nav ul li a {
         display: block;
-        padding: 15px 20px;
-        width: 100%;
+        padding: 15px;
     }
 
-    #menu-img{
-        padding: 0;
+    nav .menu-animation::after {
+        display: none;
     }
 
-    nav a::after {
-        background: none;
-    }
-
-    /* LOGO */
-    .brand img {
-        height: 35px;
-    }
-
-    /* ICONO DENTRO DEL MENÚ */
-    .user-panel {
-        width: 100%;
-        justify-content: center;
-        padding: 10px 0;
-        margin: 0;
-    }
-
-    .menu-center {
-        flex-direction: column;
-        width: 100%;
-        gap: 0;
+    nav ul li a:hover {
+        background: #333;
+        color: white;
     }
 }

@@ -11,10 +11,26 @@
 <body>
 
   <header>
-    <nav>
-      <div class="brand">
-        <a href="#inicio">
-          <img src="images/logo.png" alt="Logo">
+  <nav>
+    <div class="brand">
+      <a href="#inicio">
+        <img src="images/logo.png" alt="Logo">
+      </a>
+    </div>
+
+    <ul id="menu">
+      <li><a class="menu-animation" href="#inicio">Inicio</a></li>
+      <li><a class="menu-animation" href="#eventos">Eventos</a></li>
+      <li><a class="menu-animation" href="#galeria">Galería</a></li>
+      <li><a class="menu-animation" href="#contacto">Contacto</a></li>
+      <li><a class="menu-animation" href="#jugar">¿Quieres jugar?</a></li>
+      <li><a class="menu-animation" href="#logros">Logros</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <div class="user-panel">
+        <a id="menu-img" href="#" onclick="mostrarLogin()">
+          <img src="images/login-icon.png" alt="icono de registro/inicio sesion">
         </a>
       </div>
 
@@ -23,22 +39,9 @@
         <span></span>
         <span></span>
       </div>
-
-      <ul id="menu">
-        <div class="menu-center">
-          <li><a class="menu-animation" href="#inicio">Inicio</a></li>
-          <li><a class="menu-animation" href="#eventos">Eventos</a></li>
-          <li><a class="menu-animation" href="#galeria">Galería</a></li>
-          <li><a class="menu-animation" href="#contacto">Contacto</a></li>
-          <li><a class="menu-animation" href="#jugar">¿Quieres jugar?</a></li>
-          <li><a class="menu-animation" href="#logros">Logros</a></li>
-        </div>
-        <li class="user-panel"><a id="menu-img" href="#" onclick="mostrarLogin()">
-            <img src="images/login-icon.png" alt="icono de registro/inicio sesion">
-          </a></li>
-      </ul>
-    </nav>
-  </header><br><br>
+    </div>
+  </nav>
+</header><br><br>
   <p>&nbsp;Si lees esto es que funciona todo lo que he hecho hasta ahora y esta todo okey</p>
   <script src="js/script.js"></script>
 </body>
