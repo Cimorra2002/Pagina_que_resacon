@@ -175,12 +175,13 @@ nav a:hover {
         flex-direction: column;
         gap: 0;
         max-height: 0;
-        overflow: hidden;
+        overflow-y: auto;
         transition: max-height 0.4s ease-in-out;
+        -webkit-overflow-scrolling: touch; /* Suavidad en scroll de iPhone */
     }
 
     nav ul.active {
-        max-height: 500px;
+        max-height: calc(100vh - 65px);
     }
 
     nav ul li {

@@ -4,6 +4,13 @@ function toggleMenu() {
 
     menu.classList.toggle("active");
     toggle.classList.toggle("active");
+
+    // Si el menú está abierto, bloqueamos el scroll del cuerpo de la web
+    if (menu.classList.contains("active")) {
+        document.body.style.overflow = "hidden";
+    } else {
+        document.body.style.overflow = "auto";
+    }
 }
 
 /* Cerrar menú al tocar opción */
