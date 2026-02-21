@@ -169,7 +169,7 @@ nav a:hover {
     /* Menú desplegable */
     nav ul {
         position: absolute;
-        top: 65px; /* Ajustar según altura de tu header */
+        top: 65px;
         left: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.95);
@@ -179,12 +179,11 @@ nav a:hover {
         overflow-y: auto;
         overflow-x: hidden;
         transition: max-height 0.4s ease-in-out;
-        -webkit-overflow-scrolling: touch; /* Suavidad en scroll de iPhone */
+        -webkit-overflow-scrolling: touch;
     }
 
     nav ul.active {
-        max-height: 85vh;
-        padding-bottom: 80px;
+        max-height: calc(100vh - 65px);
     }
 
     nav ul li {
