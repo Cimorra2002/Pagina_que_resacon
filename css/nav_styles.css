@@ -147,6 +147,7 @@ nav a:hover {
 @media(max-width: 768px) {
     nav {
         padding: 10px 20px;
+        height: auto;
     }
 
     /* Cambio el orden en móvil */
@@ -176,6 +177,7 @@ nav a:hover {
         gap: 0;
         max-height: 0;
         overflow-y: auto;
+        overflow-x: hidden;
         transition: max-height 0.4s ease-in-out;
         -webkit-overflow-scrolling: touch; /* Suavidad en scroll de iPhone */
     }
